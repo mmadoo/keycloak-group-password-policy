@@ -144,7 +144,6 @@ public abstract class FakeRealmV12 extends FakeRealmV11 {
         throw new UnsupportedOperationException("Not supported yet.");
 	}
 
-	@Override
 	public Stream<GroupModel> searchForGroupByNameStream(String search, Integer first, Integer max) {
         throw new UnsupportedOperationException("Not supported yet.");
 	}
@@ -194,7 +193,6 @@ public abstract class FakeRealmV12 extends FakeRealmV11 {
         throw new UnsupportedOperationException("Not supported yet.");
 	}
 
-	@Override
 	public Stream<String> getDefaultRolesStream() {
         throw new UnsupportedOperationException("Not supported yet.");
 	}

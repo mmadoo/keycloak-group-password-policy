@@ -16,15 +16,16 @@
 
 package com.github.jpicht.keycloak.policy;
 
-import org.keycloak.models.ParConfig;
+import org.keycloak.models.ClientModel;
+import org.keycloak.models.RealmModel;
 
 import java.util.Map;
+import java.util.stream.Stream;
 
-public abstract class FakeRealmV18 extends FakeRealmV15 {
-
+public abstract class FakeRealmV23 extends FakeRealmV18 {
 
     @Override
-    public void createOrUpdateRealmLocalizationTexts(String locale, Map<String, String> localizationTexts) {
+    public Stream<ClientModel> searchClientByAuthenticationFlowBindingOverrides(Map<String, String> map, Integer integer, Integer integer1) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 }

@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019 Julian Picht
  * Copyright 2021 Brian Long (brian@inteligr8.com)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,15 +17,24 @@
 
 package com.github.jpicht.keycloak.policy;
 
-import org.keycloak.models.ParConfig;
+import org.keycloak.models.ClientModel;
+import org.keycloak.models.PasswordPolicy;
 
 import java.util.Map;
+import java.util.stream.Stream;
 
-public abstract class FakeRealmV18 extends FakeRealmV15 {
+public class FakeRealm extends FakeRealmV23 {
 
+    private PasswordPolicy passwordPolicy;
+    
+    @Override
+    public PasswordPolicy getPasswordPolicy() {
+        return passwordPolicy;
+    }
 
     @Override
-    public void createOrUpdateRealmLocalizationTexts(String locale, Map<String, String> localizationTexts) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setPasswordPolicy(PasswordPolicy policy) {
+        passwordPolicy = policy;
     }
+
 }
