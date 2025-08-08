@@ -445,7 +445,7 @@
 						<artifactId>build-helper-maven-plugin</artifactId>
 						<executions>
 							<execution>
-								<id>add-source-keycloak-v18</id>
+								<id>add-source-keycloak-v23</id>
 								<goals><goal>add-source</goal></goals>
 								<configuration>
 									<sources>
@@ -461,6 +461,47 @@
 										<source>${basedir}/src/keycloak-v18-common/java</source>
 										<source>${basedir}/src/keycloak-v23-common/java</source>
 										<source>${basedir}/src/keycloak-v23/java</source>
+									</sources>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>keycloak-v26</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<keycloak.majorVersion>26</keycloak.majorVersion>
+				<java.version>17</java.version>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>build-helper-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>add-source-keycloak-v26</id>
+								<goals><goal>add-source</goal></goals>
+								<configuration>
+									<sources>
+										<source>${basedir}/src/keycloak-v6-common/java</source>
+										<source>${basedir}/src/keycloak-v8-common/java</source>
+										<source>${basedir}/src/keycloak-v9-common/java</source>
+										<source>${basedir}/src/keycloak-v10-common/java</source>
+										<source>${basedir}/src/keycloak-v11-common/java</source>
+										<source>${basedir}/src/keycloak-v12-common/java</source>
+										<source>${basedir}/src/keycloak-v13-common/java</source>
+										<source>${basedir}/src/keycloak-v14-common/java</source>
+										<source>${basedir}/src/keycloak-v15-common/java</source>
+										<source>${basedir}/src/keycloak-v18-common/java</source>
+										<source>${basedir}/src/keycloak-v23-common/java</source>
+										<source>${basedir}/src/keycloak-v26-common/java</source>
+										<source>${basedir}/src/keycloak-v26/java</source>
 									</sources>
 								</configuration>
 							</execution>
